@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World of Sports</title>
+  <meta name="description" content="Watch live sports channels — cricket, football, basketball, hockey & more. Smooth HLS playback on web."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- HLS.js for smooth playback of .m3u8 without Flash/plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.8/dist/hls.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>World of Sports</h1>
+    <input id="search" type="text" placeholder="Search channels..." />
+    <a class="tg" href="https://t.me/worldsportsofficial" target="_blank" rel="noopener">Join Telegram</a>
+  </header>
+
+  <main>
+    <section id="channel-container" class="grid"></section>
+    <div id="loader" class="loader">Loading…</div>
+  </main>
+
+  <!-- Player Modal -->
+  <div id="player-modal" class="modal" aria-hidden="true">
+    <button id="close-modal" class="close" aria-label="Close">×</button>
+    <video id="player" controls playsinline></video>
+    <div id="tip" class="tip" hidden>
+      This channel needs a proxy (Referer/Origin headers). Configure later to enable it.
+    </div>
+  </div>
+
+  <!-- SEO Text -->
+  <section class="seo">
+    <h2>Live Sports Streaming: Cricket, Football, Basketball, Hockey & More</h2>
+    <p>Watch live cricket (ODI, T20, Test), football leagues (EPL, La Liga, UCL), basketball (NBA), hockey, tennis, badminton, kabaddi and more — all in one place. Smooth HLS playback on modern browsers.</p>
+    <p>Optimized for keywords like live sports streaming, cricket live, football live, basketball live, hockey live, tennis live, sports channels.</p>
+  </section>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> World of Sports — Channels load from your playlist.</small>
+  </footer>
+</body>
+</html>
